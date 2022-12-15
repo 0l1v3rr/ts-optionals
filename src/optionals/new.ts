@@ -5,14 +5,14 @@ import { NonNull, Nullable } from "./types";
  * Returns an empty Optional instance.
  */
 export const empty = <T extends NonNull>(): Optional<T> => {
-  return new Optional();
+  return new Optional<T>();
 };
 
 /**
  * Returns an Optional with the specified present non-null value.
  */
 export const of = <T extends NonNull>(value: T): Optional<T> => {
-  return new Optional(value);
+  return new Optional<T>(value);
 };
 
 /**
